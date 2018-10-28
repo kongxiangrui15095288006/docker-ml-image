@@ -43,4 +43,5 @@ RUN mkdir /notebooks/
 # 打开工作目录
 WORKDIR /notebooks/
 # 运行
-CMD ["/opt/anaconda3/bin/jupyter-notebook --allow-root"]
+COPY run_jupyter.sh /run_jupyter.sh
+CMD ["/run_jupyter.sh", "--allow-root"]
