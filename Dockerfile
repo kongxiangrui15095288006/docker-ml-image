@@ -29,10 +29,8 @@ RUN wget --quiet https://repo.anaconda.com/archive/Anaconda3-5.2.0-Linux-x86_64.
     rm ~/Anaconda3-5.2.0-Linux-x86_64.sh && \
     echo "export PATH=/opt/anaconda3/bin:$PATH" >> ~/.bashrc
 
-# 拷贝依赖文件到Docker镜像中
-COPY requirements.txt ~/requirements.txt
 # 安装依赖
-RUN /opt/anaconda3/bin/pip install -r ~/requirements.txt
+RUN /opt/anaconda3/bin/pip install tensorflow pandas
 # 运行jupyter
 # 打开端口，放射端口
 EXPOSE 6006
