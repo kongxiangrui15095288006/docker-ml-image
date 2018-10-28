@@ -44,4 +44,5 @@ RUN mkdir /notebooks/
 WORKDIR /notebooks/
 # 运行
 COPY run_jupyter.sh /run_jupyter.sh
+RUN chmod 755 /run_jupyter.sh
 CMD ["/run_jupyter.sh", "--allow-root"]
