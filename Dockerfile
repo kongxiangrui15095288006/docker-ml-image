@@ -11,6 +11,10 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         libzmq3-dev \
         pkg-config \
         python \
+        gcc \
+        cmake \
+        g++ \
+        wget \
         python-dev \
         rsync \
         software-properties-common \
