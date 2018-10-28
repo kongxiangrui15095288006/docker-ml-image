@@ -43,4 +43,4 @@ RUN mkdir /notebooks/
 # 打开工作目录
 WORKDIR /notebooks/
 # 运行
-CMD ["jupyter notebook", "--ip=0.0.0.0 --port=8888 --allow-root"]
+CMD ["/opt/anaconda3/bin/jupyter-notebook", "--ip=0.0.0.0 --port=8888 --allow-root"]
