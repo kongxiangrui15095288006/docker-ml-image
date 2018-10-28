@@ -38,11 +38,9 @@ EXPOSE 8888
 EXPOSE 8080
 EXPOSE 7999
 # 定义工作目录
-# 拷贝工作目录
-COPY notebooks /notebooks
+# create工作目录
+RUN mkdir /notebooks/
 # 打开工作目录
 WORKDIR /notebooks/
-# 运行jupyternotebook
-COPY run_jupyter.sh /
 # 运行
-CMD ["/run_jupyter.sh"]
+CMD ["jupyter notebook", "--ip=0.0.0.0 --port=8888 --allow-root"]
